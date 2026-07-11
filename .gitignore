@@ -18,3 +18,8 @@ chroma_db/
 .DS_Store
 .idea/
 .vscode/
+
+# for data test 
+data/1000_Tahun_Nusantara.pdf
+data/Bagaimana_Cara_Memasarkan_Genset.pdf
+data/

@@ -19,8 +19,10 @@ def answer(query: str, top_k: int = 3):
     context = build_context(chunks)
 
     prompt = f"""Kamu asisten yang menjawab pertanyaan HANYA berdasarkan konteks di bawah.
-Jika jawaban tidak ada dalam konteks, katakan "Maaf, informasi itu tidak ada di dokumen."
-Sebutkan sumber (nama file) yang kamu pakai.
+
+Aturan:
+- Jika jawaban ADA di konteks: jawab dengan jelas, lalu sebutkan sumber (nama file) yang kamu pakai.
+- Jika jawaban TIDAK ADA di konteks: jawab HANYA dengan kalimat "Maaf, informasi itu tidak ada di dokumen." TANPA menyebut sumber, nama file, atau apa pun setelahnya.
 
 Konteks:
 {context}

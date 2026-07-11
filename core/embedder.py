@@ -1,6 +1,6 @@
 from sentence_transformers import SentenceTransformer
 
-# Model diload sekali saja, di level modul
+# notes : di upload sekali saja di level module
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 

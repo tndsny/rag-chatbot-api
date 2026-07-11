@@ -18,6 +18,11 @@ def index_chunks(chunks: list[str], source: str):
         metadatas=metadatas,
     )
 
+def reset_collection():
+    global collection
+    client.delete_collection(name="documents")
+    collection = client.get_or_create_collection(name="documents")
+
 def retrieve(query: str, top_k: int = 3):
     query_embedding = embed_texts([query])[0]
 
